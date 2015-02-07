@@ -1,0 +1,9 @@
+E:\KASH\Программирование\kashpir\Draughts\UnitTests\bin\Debug\UnitTests.dll
+E:\KASH\Программирование\kashpir\Draughts\UnitTests\bin\Debug\UnitTests.pdb
+E:\KASH\Программирование\kashpir\Draughts\UnitTests\bin\Debug\BusinessLogic.dll
+E:\KASH\Программирование\kashpir\Draughts\UnitTests\bin\Debug\nunit.framework.dll
+E:\KASH\Программирование\kashpir\Draughts\UnitTests\bin\Debug\BusinessLogic.pdb
+E:\KASH\Программирование\kashpir\Draughts\UnitTests\bin\Debug\nunit.framework.xml
+E:\KASH\Программирование\kashpir\Draughts\UnitTests\obj\Debug\ResolveAssemblyReference.cache
+E:\KASH\Программирование\kashpir\Draughts\UnitTests\obj\Debug\UnitTests.dll
+E:\KASH\Программирование\kashpir\Draughts\UnitTests\obj\Debug\UnitTests.pdb

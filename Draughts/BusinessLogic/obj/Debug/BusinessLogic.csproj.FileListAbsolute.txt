@@ -1,0 +1,5 @@
+E:\KASH\Программирование\kashpir\Draughts\BusinessLogic\bin\Debug\BusinessLogic.dll
+E:\KASH\Программирование\kashpir\Draughts\BusinessLogic\bin\Debug\BusinessLogic.pdb
+E:\KASH\Программирование\kashpir\Draughts\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+E:\KASH\Программирование\kashpir\Draughts\BusinessLogic\obj\Debug\BusinessLogic.dll
+E:\KASH\Программирование\kashpir\Draughts\BusinessLogic\obj\Debug\BusinessLogic.pdb

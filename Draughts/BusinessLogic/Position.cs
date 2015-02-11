@@ -8,24 +8,24 @@ namespace BusinessLogic
 {
     public class Position
     {
-        private SetOfDraughts state;
-        private readonly Peculiarity.Colours whoseMove;
+        private SetOfItems state;
+        private readonly Appearance whoseMove;
 
-        public SetOfDraughts State { get { return state; } }
-        public Peculiarity.Colours WhoseMove { get { return whoseMove; } }
+        public SetOfItems State { get { return state; } }
+        public ColourNames WhoseMove { get { return whoseMove.Colour; } }
 
-        public Position(SetOfDraughts state, Peculiarity.Colours whoseMove)
+        public Position(SetOfItems state, ColourNames whoseMove)
         {
             this.state = state;
-            this.whoseMove = whoseMove;
+            this.whoseMove = new Appearance(whoseMove);
         }
 
         public bool TakingExists()
         {
             foreach (var draught in State.Arrangement)
             {
-                var draughtInPlay = new DraughtInPlay(draught, State);
-                if (WhoseMove == draught.Colour && draughtInPlay.TakingExists()) return true;
+                var draughtInPlay = new ItemInPlay(draught, State);
+                if (WhoseMove == draught.Colour() && draughtInPlay.TakingExists()) return true;
             }
             return false;
         }
@@ -36,8 +36,8 @@ namespace BusinessLogic
             var moves = new Paths();
             foreach (var draught in State.Arrangement)
             {
-                var draughtInPlay = new DraughtInPlay(draught, State.Clone());
-                if (WhoseMove == draught.Colour && draughtInPlay.TakingExists())
+                var draughtInPlay = new ItemInPlay(draught, State.Clone());
+                if (WhoseMove == draught.Colour() && draughtInPlay.TakingExists())
                     moves.AddMoves(draughtInPlay.Moves());
             }
             return moves;
@@ -48,8 +48,8 @@ namespace BusinessLogic
             var moves = new Paths();
             foreach (var draught in State.Arrangement)
             {
-                var draughtInPlay = new DraughtInPlay(draught, State);
-                if (WhoseMove == draught.Colour)
+                var draughtInPlay = new ItemInPlay(draught, State);
+                if (WhoseMove == draught.Colour())
                     moves.AddMoves(draughtInPlay.Moves());
             }
             return moves;

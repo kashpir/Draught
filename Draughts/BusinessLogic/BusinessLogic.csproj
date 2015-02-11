@@ -40,19 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Directions.cs" />
+    <Compile Include="Vector.cs" />
+    <Compile Include="Direction.cs" />
+    <Compile Include="IVector.cs" />
+    <Compile Include="Limits.cs" />
     <Compile Include="Constants.cs" />
-    <Compile Include="Geometry.cs" />
-    <Compile Include="ICreate.cs" />
-    <Compile Include="Draught.cs" />
-    <Compile Include="DraughtInPlay.cs" />
-    <Compile Include="Paths.cs" />
-    <Compile Include="Peculiarity.cs" />
-    <Compile Include="Position.cs" />
-    <Compile Include="SetOfDraughts.cs" />
+    <Compile Include="BoardGeometry.cs" />
+    <Compile Include="SetOfVectors.cs" />
     <Compile Include="Path.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemInPlay.cs" />
+    <Compile Include="Paths.cs" />
+    <Compile Include="Appearance.cs" />
+    <Compile Include="Position.cs" />
+    <Compile Include="SetOfItems.cs" />
     <Compile Include="Square.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="IToUser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

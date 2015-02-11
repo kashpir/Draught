@@ -1,7 +1,7 @@
 E:\KASH\Программирование\kashpir\Draughts\Draughts\bin\Debug\Draughts.exe
 E:\KASH\Программирование\kashpir\Draughts\Draughts\bin\Debug\Draughts.pdb
+E:\KASH\Программирование\kashpir\Draughts\Draughts\bin\Debug\BusinessLogic.dll
+E:\KASH\Программирование\kashpir\Draughts\Draughts\bin\Debug\BusinessLogic.pdb
 E:\KASH\Программирование\kashpir\Draughts\Draughts\obj\x86\Debug\ResolveAssemblyReference.cache
 E:\KASH\Программирование\kashpir\Draughts\Draughts\obj\x86\Debug\Draughts.exe
 E:\KASH\Программирование\kashpir\Draughts\Draughts\obj\x86\Debug\Draughts.pdb
-E:\KASH\Программирование\kashpir\Draughts\Draughts\bin\Debug\BusinessLogic.dll
-E:\KASH\Программирование\kashpir\Draughts\Draughts\bin\Debug\BusinessLogic.pdb

@@ -41,8 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestDraught.cs" />
+    <Compile Include="TestColours.cs" />
+    <Compile Include="TestDraughtGeometry.cs" />
+    <Compile Include="TestItem.cs" />
     <Compile Include="TestDraughtInPlay.cs" />
+    <Compile Include="TestLimits.cs" />
     <Compile Include="TestPosition.cs" />
     <Compile Include="TestSetOfDraughts.cs" />
     <Compile Include="TestSimpleMoves.cs" />

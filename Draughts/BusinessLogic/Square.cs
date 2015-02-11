@@ -5,11 +5,8 @@ using System.Text;
 
 namespace BusinessLogic
 {
-    public class Square : IToUser, ICreate
+    public class Square : IVector
     {
-        private const int LowLimit = 1;
-        private const int UpperLimit = 8;
-
         readonly int firstCoordinate;
         readonly int secondCoordinate;
 
@@ -30,40 +27,6 @@ namespace BusinessLogic
             this.secondCoordinate = secondCoordinate;
         }
 
-        public bool OnBoard()
-        {
-            return (OnRightSquares() && InLimit(FirstCoordinate) &&
-                    InLimit(SecondCoordinate));
-        }
-
-        public bool AreEqual(Square compared)
-        {
-            return ((compared.FirstCoordinate == FirstCoordinate) &&
-                    (compared.SecondCoordinate == SecondCoordinate));
-        }
-
-        public Square CreateSquare(Geometry.Direction direction, int distance)
-        {
-            switch (direction)
-            {
-                case Geometry.Direction.LeftUp:
-                    return new Square(FirstCoordinate - distance, SecondCoordinate + distance);
-                case Geometry.Direction.RightUp:
-                    return new Square(FirstCoordinate + distance, SecondCoordinate + distance);
-                case Geometry.Direction.LeftDown:
-                    return new Square(FirstCoordinate - distance, SecondCoordinate - distance);
-                case Geometry.Direction.RightDown:
-                    return new Square(FirstCoordinate + distance, SecondCoordinate - distance);
-            }
-            return new Square();
-        }
-
-        public Draught CreateDraught(Geometry.Direction direction, int distance,
-            Peculiarity.Colours colour)
-        {
-            return new Draught(CreateSquare(direction, distance), colour);
-        }
-
         public StringBuilder CoordinatesToUser()
         {
             StringBuilder str = new StringBuilder();
@@ -72,15 +35,20 @@ namespace BusinessLogic
             return str;
         }
 
-        private bool InLimit(int coordinate)
+        public bool AreEqual(IVector compared)
         {
-            return (LowLimit <= coordinate && coordinate <= UpperLimit);
+            return ((compared.FirstNumber == FirstCoordinate) &&
+                    (compared.SecondNumber == SecondCoordinate));
         }
 
-        private bool OnRightSquares()
+        public int FirstNumber
         {
-            return ((FirstCoordinate + SecondCoordinate) % 2 == 0);
+            get { return FirstCoordinate; }
         }
-        
+
+        public int SecondNumber
+        {
+            get { return SecondCoordinate; }
+        }
     }
 }

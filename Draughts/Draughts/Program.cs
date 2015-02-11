@@ -10,9 +10,8 @@ namespace Draughts
     {
         private static void Main(string[] args)
         {
-            var arrangement = new SetOfDraughts("wa1; wc1; bb2; bb4; bb6;");
-            var colour = Peculiarity.Colours.Black;
-            var position = new Position(arrangement, colour);
+            var arrangement = new SetOfItems("wa1; bb2; bb4; bb6;");
+            var position = new Position(arrangement, ColourNames.White);
             position.Moves().Show();
             Console.ReadLine();
         }

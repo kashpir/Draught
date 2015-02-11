@@ -1,32 +1,22 @@
 ﻿using System;
-using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace BusinessLogic
 {
-    public class Path : IToUser
+    public class Path : SetOfVectors
     {
-        private List<Square> points = new List<Square>();
+        public Path(IVector vector)
+            : base(vector)
+        { }
 
-        public List<Square> Points { get { return points; } }
-
-        public Path(Square square)
-        {
-            Points.Add(square);
-        }
-
-        public void Add(Square square)
-        {
-            Points.Add(square);
-        }
-        
         public StringBuilder CoordinatesToUser()
         {
             StringBuilder str = new StringBuilder();
-            foreach (var square in Points)
+            foreach (var vector in Points)
             {
+                var square = new Square(vector.FirstNumber, vector.SecondNumber);
                 str.Append(square.CoordinatesToUser());
                 str.Append("-");
             }
